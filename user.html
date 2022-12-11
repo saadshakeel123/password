@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            border: 1px solid black;
+            display: none;
+            margin: 5% 45%;
+        }
+        h1{
+            text-align: center;
+        }
+        button{
+            margin:5% 46% ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Please click and add some data</h1>
+<button onclick="user()">click me</button>
+<p id="main"></p>
+
+    <script>
+        function user(){
+        let user =prompt("Enter the range of Array");
+        let name = new Array(user);
+
+        for( i=0; i<user; i++){
+            name[i] = prompt("Please Enter Name");
+            document.getElementById("main").innerHTML=name+"<br>";
+            document.getElementById("main").style.display="block";
+        }
+    }
+    </script>
+</body>
+</html>

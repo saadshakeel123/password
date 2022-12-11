@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+.inp{
+   margin-top: 90px;
+   margin-left: 290px;
+}
+.btn{
+    margin-top: 30px;
+   margin-left: 420px;
+}
+.h1{
+    margin-top: 30px;
+   margin-left: 290px; 
+   color: white;
+}
+.h2{
+    margin-top: 30px;
+   margin-left: 390px; 
+   color: white;
+}
+body{
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+</style>
+</head>
+
+<body>
+<h1 class="h2" >Chiken Shop </h1>
+
+    <div class="inp">
+    <input type="text" placeholder="Please Enter Cost" id="input1">
+    <input type="text" placeholder="Please Enter Gram" id="input2">
+</div>
+  <button type="button" id="btn" class="btn btn-secondary   ">Check Price</button>
+<h1 id="para" class="h1"></h1>
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            let x = document.getElementById("input1").value;
+            let y = document.getElementById("input2").value;
+            let z = x / 1000 * y;
+            document.getElementById("para").innerHTML = "You Have to Paid :Rs." + z;
+        })
+    </script>
+</body>
+
+</html>
